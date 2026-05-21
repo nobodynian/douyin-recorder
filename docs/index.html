@@ -1082,7 +1082,7 @@ function rp(mt){
 
 
 
-    let mkk=p.ri+'|'+p.st;let mu=mt&&mt[mkk];if(!mu&&p.ri&&mt[p.ri])mu=mt[p.ri];if(typeof mu==='object'&&mu.pv){h+='<span class="pkl" style="color:var(--accent2)">\u2601 '+Number(mu.pv).toLocaleString()+'</span>';}else{h+='<span id="pk'+(mkk.replace(/[^0-9]/g,''))+'"></span>';if(typeof mu==='string'){let _mu=mu;(async function(kk,mi,url){try{var r2=await fetch(url,{headers:{Accept:'application/octet-stream',Authorization:'Bearer '+T}});var md2=await r2.json();var pe=document.getElementById('pk'+mi);if(pe)pe.innerHTML=md2.peak_viewers?'<span class="pkl" style="color:var(--accent2)">\u2601 '+Number(md2.peak_viewers).toLocaleString()+'</span>':'<span class="pkl">\u2601 -</span>';}catch(e){}})(mkk,mkk.replace(/[^0-9]/g,''),_mu);}}for(var k in ty){h+='<span class="file-badge">'+gi(k)+' '+ty[k]+'</span>';}
+    let mkk=p.ri+'|'+p.st;let mu=mt&&mt[mkk];if(!mu&&p.ri&&mt&&mt[p.ri])mu=mt[p.ri];if(typeof mu==='object'&&mu.pv){h+='<span class="pkl" style="color:var(--accent2)">\u2601 '+Number(mu.pv).toLocaleString()+'</span>';}else{h+='<span id="pk'+(mkk.replace(/[^0-9]/g,''))+'"></span>';if(typeof mu==='string'){let _mu=mu;(async function(kk,mi,url){try{var r2=await fetch(url,{headers:{Accept:'application/octet-stream',Authorization:'Bearer '+T}});var md2=await r2.json();var pe=document.getElementById('pk'+mi);if(pe)pe.innerHTML=md2.peak_viewers?'<span class="pkl" style="color:var(--accent2)">\u2601 '+Number(md2.peak_viewers).toLocaleString()+'</span>':'<span class="pkl">\u2601 -</span>';}catch(e){}})(mkk,mkk.replace(/[^0-9]/g,''),_mu);}}for(var k in ty){h+='<span class="file-badge">'+gi(k)+' '+ty[k]+'</span>';}
 
 
 

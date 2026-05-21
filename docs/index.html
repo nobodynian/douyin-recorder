@@ -704,7 +704,7 @@ function gb(i){if(rm)for(var j=0;j<rm.length;j++)if(rm[j].id===i)return rm[j].na
 function H(ri,st){if(!ri)return false;var k=ri+'|'+(st||'');return _hidden.indexOf(k)>=0;}
 function tH(ri,st,a){var k=ri+'|'+(st||'');if(a){if(_hidden.indexOf(k)<0)_hidden.push(k);}else{_hidden=_hidden.filter(function(x){return x!==k;});}localStorage.setItem('_h',JSON.stringify(_hidden));}
 function bc(){var c=document.querySelectorAll('.pkg-cb:checked');var b=document.getElementById('bb');if(!b)return;if(c.length){b.classList.add('show');document.getElementById('bcnt').textContent='已选 '+c.length+' 个';}else{b.classList.remove('show');document.getElementById('bcnt').textContent='已选 0 个';}}
-function bh(){var c=document.querySelectorAll('.pkg-cb:checked');if(!c.length)return;c.forEach(function(cb){var ri=cb.getAttribute('data-ri'),st=cb.getAttribute('data-st');tH(ri,st,true);cb.checked=false;});bc();}
+function bh(){var c=document.querySelectorAll('.pkg-cb:checked');if(!c.length)return;c.forEach(function(cb){var ri=cb.getAttribute('data-ri'),st=cb.getAttribute('data-st');tH(ri,st,true);cb.checked=false;});rp();}
 
 async function lo(){
 
@@ -1072,7 +1072,7 @@ function rp(mt){
 
 
 
-    h+='<div class="pkg-card" onclick="od(\''+p.an+'\','+pk.indexOf(p)+')">';
+    h+='<div class="pkg-card'+(H(p.ri,p.st)?' hidden-pkg':'')+'" onclick="od(\''+p.an+'\','+pk.indexOf(p)+')">';
 
 
 
